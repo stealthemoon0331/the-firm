@@ -116,7 +116,7 @@ export default function VCoinsPage() {
                 >
                   {/* Background Image */}
                   <div>
-                    <Image src={pkg.backgroundImage} alt={pkg.title} width={300} height={200} />
+                    <Image src={pkg.backgroundImage} alt="" width={300} height={200} />
                   </div>
                   
                   {/* Content */}

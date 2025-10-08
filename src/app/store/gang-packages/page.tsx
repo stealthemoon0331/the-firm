@@ -31,7 +31,7 @@ const gangPackages: GangPackage[] = [
   {
     id: 'street-tier',
     title: 'STREET TIER',
-    price: 'This item is free',
+    price: '',
     description: 'Basic entry-level package for new groups forming their identity',
     
     icon: <MapPin className="h-8 w-8" />,
@@ -113,8 +113,15 @@ export default function GangPackagesPage() {
                   className="group relative bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300 flex flex-col h-full"
                 >
                   {/* Background Image */}
-                  <div className="flex-shrink-0">
+                  <div className="flex-shrink-0 relative">
                     <Image src={pkg.backgroundImage} alt={pkg.title} width={300} height={200} />
+                    {pkg.free && (
+                      <div className="absolute top-4 right-4 z-10">
+                        <div className="bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full">
+                          FREE
+                        </div>
+                      </div>
+                    )}
                   </div>
                   
                   {/* Content */}
@@ -124,15 +131,9 @@ export default function GangPackagesPage() {
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                         {pkg.title}
                       </h3>
-                      {pkg.free ? (
-                        <div className="inline-block bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full mb-2">
-                          FREE
-                        </div>
-                      ) : (
-                        <p className="text-2xl font-bold mb-2 text-blue-400">
-                          {pkg.price}
-                        </p>
-                      )}
+                      <p className="text-2xl font-bold mb-2 text-blue-400">
+                        {pkg.price}
+                      </p>
                       <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm">
                         {pkg.description}
                       </p>

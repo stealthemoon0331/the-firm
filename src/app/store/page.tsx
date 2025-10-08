@@ -154,37 +154,6 @@ export default function StorePage() {
               </div>
             </div>
 
-            {/* Category Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {storeCategories.map((category, index) => (
-                <motion.div
-                  key={category.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Link href={category.href}>
-                    <div className="group relative bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/20">
-                      {/* Background Image */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 opacity-50 group-hover:opacity-30 transition-opacity duration-300" />
-                      
-                      {/* Content */}
-                      <div className="relative z-10 p-8 h-48 flex flex-col justify-center items-center text-center">
-                        <div className="text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">
-                          {category.icon}
-                        </div>
-                        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                          {category.title}
-                        </h3>
-                        <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
-                          {category.subtitle}
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
