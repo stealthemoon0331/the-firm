@@ -67,7 +67,7 @@ export default function StoreHeader({ currentPage = '', className = "" }: StoreH
       </div>
 
       {/* Top Bar */}
-      <div className="relative z-10 flex items-center justify-between p-6">
+      <div className="relative z-10 flex items-center justify-between px-6 py-8">
         <div className="text-slate-400 text-sm">
           {getPageUrl()}
         </div>
@@ -101,7 +101,7 @@ export default function StoreHeader({ currentPage = '', className = "" }: StoreH
 
       {/* Navigation */}
       <div className="absolute bottom-0 left-0 right-0">
-        <nav className="flex items-center justify-center space-x-6 py-4 bg-slate-800/90 backdrop-blur-sm border-t border-slate-700/50">
+        <nav className="flex items-center justify-center space-x-6 py-6 px-8 bg-slate-800/90 backdrop-blur-sm border-t border-slate-700/50">
           <Link 
             href="/store" 
             className={`relative transition-all duration-300 px-4 py-2 rounded-lg hover:bg-slate-700/50 group ${

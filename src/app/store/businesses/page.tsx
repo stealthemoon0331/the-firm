@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import StoreSidebar from '@/components/StoreSidebar';
 import StoreHeader from '@/components/StoreHeader';
+import BusinessPackageCard from '@/components/BusinessPackageCard';
 import { 
   Crown, 
   Users, 
@@ -22,8 +23,7 @@ interface BusinessPackage {
   title: string;
   price: string;
   description: string;
-  icon: React.ReactNode;
-  backgroundImage: string;
+  imageName: string;
 }
 
 const businessPackages: BusinessPackage[] = [
@@ -32,48 +32,42 @@ const businessPackages: BusinessPackage[] = [
     title: 'Redline Complete',
     price: '£60.00',
     description: 'Complete automotive business package',
-    icon: <Car className="h-8 w-8" />,
-    backgroundImage: '/api/placeholder/300/200'
+    imageName: 'Redline Complete.png'
   },
   {
     id: 'redline-dealership',
     title: 'Redline Dealership',
     price: '£35.00',
     description: 'Premium vehicle dealership',
-    icon: <Car className="h-8 w-8" />,
-    backgroundImage: '/api/placeholder/300/200'
+    imageName: 'Redline Dealership.png'
   },
   {
     id: 'ls-customs-complete',
     title: 'LS Customs Complete',
-    price: '£45.00',
-    description: 'Complete automotive customization service',
-    icon: <Wrench className="h-8 w-8" />,
-    backgroundImage: '/api/placeholder/300/200'
+    price: '£60.00',
+    description: 'Complete customization business',
+    imageName: 'LS Customs Complete.png'
   },
   {
     id: 'redline-mechanics',
     title: 'Redline Mechanics',
-    price: '£25.00',
-    description: 'Automotive repair and maintenance',
-    icon: <Wrench className="h-8 w-8" />,
-    backgroundImage: '/api/placeholder/300/200'
+    price: '£45.00',
+    description: 'Professional automotive repair',
+    imageName: 'Redline Mechanics.png'
   },
   {
     id: 'premium-dealership',
-    title: 'Premium Duluxe Dealership',
-    price: '£50.00',
+    title: 'Premium Deluxe Dealership',
+    price: '£40.00',
     description: 'Luxury vehicle dealership',
-    icon: <Car className="h-8 w-8" />,
-    backgroundImage: '/api/placeholder/300/200'
+    imageName: 'Premium Duluxe Dealership.png'
   },
   {
     id: 'route-68-mechanics',
     title: 'Route 68 Mechanics',
-    price: '£30.00',
-    description: 'Highway service station',
-    icon: <Wrench className="h-8 w-8" />,
-    backgroundImage: '/api/placeholder/300/200'
+    price: '£25.00',
+    description: 'Complete service & repair',
+    imageName: 'Route 68 Mechanics.png'
   }
 ];
 
@@ -157,44 +151,11 @@ export default function BusinessesPage() {
             {/* Business Packages Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {businessPackages.map((pkg, index) => (
-                <motion.div
+                <BusinessPackageCard 
                   key={pkg.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
-                >
-                  {/* Background Image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 opacity-50 group-hover:opacity-30 transition-opacity duration-300" />
-                  
-                  {/* Content */}
-                  <div className="relative z-10 p-6">
-                    {/* Icon */}
-                    <div className="flex items-center justify-center mb-4">
-                      <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        {pkg.icon}
-                      </div>
-                    </div>
-                    
-                    {/* Title and Price */}
-                    <div className="text-center mb-4">
-                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                        {pkg.title}
-                      </h3>
-                      <p className="text-xl font-bold text-blue-400 mb-2">
-                        {pkg.price}
-                      </p>
-                      <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm">
-                        {pkg.description}
-                      </p>
-                    </div>
-                    
-                    {/* Subscribe Button */}
-                    <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors transform hover:scale-105">
-                      Subscribe
-                    </button>
-                  </div>
-                </motion.div>
+                  pkg={pkg} 
+                  index={index}
+                />
               ))}
             </div>
           </div>

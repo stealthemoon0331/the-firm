@@ -53,6 +53,12 @@ const Counter = ({ end, duration = 2, suffix = '' }: { end: number; duration?: n
 };
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const contentBoxes = [
     {
       title: 'Legislations',
@@ -633,7 +639,7 @@ export default function Home() {
         
         {/* Floating Elements */}
         <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
+          {mounted && [...Array(20)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full"
