@@ -12,7 +12,8 @@ import {
   AlertTriangle,
   MapPin,
   Target,
-  Zap
+  Zap,
+  ShoppingCart
 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -109,35 +110,48 @@ export default function GangPackagesPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
+                  className="group relative bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300 flex flex-col h-full"
                 >
                   {/* Background Image */}
-                  <div>
+                  <div className="flex-shrink-0">
                     <Image src={pkg.backgroundImage} alt={pkg.title} width={300} height={200} />
                   </div>
                   
                   {/* Content */}
-                  <div className="relative z-10 p-8 flex flex-col items-center justify-between">
+                  <div className="relative z-10 p-8 flex flex-col flex-grow">
                     {/* Title and Price */}
-                    <div className="text-center mb-6">
+                    <div className="text-center mb-6 flex-grow">
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                         {pkg.title}
                       </h3>
-                      <p className={`text-2xl font-bold mb-2 ${pkg.free ? 'text-green-400' : 'text-blue-400'}`}>
-                        {pkg.price}
-                      </p>
+                      {pkg.free ? (
+                        <div className="inline-block bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full mb-2">
+                          FREE
+                        </div>
+                      ) : (
+                        <p className="text-2xl font-bold mb-2 text-blue-400">
+                          {pkg.price}
+                        </p>
+                      )}
                       <p className="text-gray-400 group-hover:text-gray-300 transition-colors text-sm">
                         {pkg.description}
                       </p>
                     </div>
                     
                     {/* Action Button */}
-                    <button className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors transform hover:scale-105 ${
+                    <button className={`w-full font-semibold py-3 px-6 rounded-lg transition-colors transform hover:scale-105 mt-auto flex items-center justify-center space-x-2 ${
                       pkg.free 
                         ? 'bg-orange-500 hover:bg-orange-600 text-white' 
                         : 'bg-orange-500 hover:bg-orange-600 text-white'
                     }`}>
-                      {pkg.free ? 'Add to Basket' : 'Subscribe'}
+                      {pkg.free ? (
+                        <>
+                          <ShoppingCart className="h-5 w-5" />
+                          <span>Add to Basket</span>
+                        </>
+                      ) : (
+                        <span>Subscribe</span>
+                      )}
                     </button>
                   </div>
                 </motion.div>
