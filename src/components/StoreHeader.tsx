@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,6 +17,11 @@ interface StoreHeaderProps {
 
 export default function StoreHeader({ currentPage = '', className = "" }: StoreHeaderProps) {
   const [copied, setCopied] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleCopyServer = async () => {
     try {
@@ -55,7 +60,9 @@ export default function StoreHeader({ currentPage = '', className = "" }: StoreH
       {/* TF Logo */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-8xl font-bold text-slate-600/50 select-none">
-          <Image src="/logo.png" alt="The Firm" width={300} height={300} />
+          {mounted && (
+            <Image src="/logo.png" alt="The Firm" width={300} height={300} />
+          )}
         </div>
       </div>
 
@@ -76,7 +83,7 @@ export default function StoreHeader({ currentPage = '', className = "" }: StoreH
               <div className="text-sm font-medium">play.thefirm.club</div>
               <div className="text-xs text-blue-400">Click to Copy</div>
             </div>
-            {copied ? <Check className="h-4 w-4 text-green-400" /> : <Copy className="h-4 w-4" />}
+            {mounted && copied ? <Check className="h-4 w-4 text-green-400" /> : <Copy className="h-4 w-4" />}
           </button>
           
           <button 

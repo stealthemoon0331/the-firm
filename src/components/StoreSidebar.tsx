@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 interface StoreSidebarProps {
@@ -9,6 +9,11 @@ interface StoreSidebarProps {
 
 export default function StoreSidebar({ className = "" }: StoreSidebarProps) {
   const [giftCardNumber, setGiftCardNumber] = useState('');
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleGiftCardCheck = () => {
     console.log('Checking gift card:', giftCardNumber);
@@ -36,7 +41,9 @@ export default function StoreSidebar({ className = "" }: StoreSidebarProps) {
         </h3>
         <div className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-lg p-4 border border-yellow-500/30">
           <div className="flex items-center justify-center mb-3">
-            <Image src="/vip.png" alt="VIP" width={200} height={200} className='rounded-lg'/>
+            {mounted && (
+              <Image src="/vip.png" alt="VIP" width={200} height={200} className='rounded-lg'/>
+            )}
           </div>
           <h4 className="text-white font-semibold text-center mb-2">VIP - Early Access</h4>
           <p className="text-white text-center mb-4">£5.00</p>
