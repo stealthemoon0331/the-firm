@@ -101,35 +101,68 @@ export default function BusinessesPage() {
               
               {/* Key Benefits */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Building2 className="h-6 w-6 text-blue-400" />
-                    <h3 className="text-lg font-bold text-white">Elevate Your Empire: Premium Business Access</h3>
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 group"
+                >
+                  <div className="flex items-start space-x-3 mb-4">
+                    {/* <Building2 className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" /> */}
+                    <div>
+                      <h3 className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
+                        Elevate Your Empire:
+                      </h3>
+                      <h4 className="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
+                        Premium Business Access
+                      </h4>
+                    </div>
                   </div>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     Unlock exclusive business opportunities with enhanced management capabilities.
                   </p>
-                </div>
+                </motion.div>
                 
-                <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <Briefcase className="h-6 w-6 text-green-400" />
-                    <h3 className="text-lg font-bold text-white">The Firm's Elite Business Network</h3>
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-green-500/50 transition-all duration-300 group"
+                >
+                  <div className="flex items-start space-x-3 mb-4">
+                    {/* <Briefcase className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" /> */}
+                    <div>
+                      <h3 className="text-lg font-bold text-white group-hover:text-green-300 transition-colors">
+                        The Firm's Elite Business Network
+                      </h3>
+                    </div>
                   </div>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     Join the most prestigious business community in the city.
                   </p>
-                </div>
+                </motion.div>
                 
-                <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <DollarSign className="h-6 w-6 text-yellow-400" />
-                    <h3 className="text-lg font-bold text-white">Exclusive Business Subscriptions: Run the City</h3>
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-yellow-500/50 transition-all duration-300 group"
+                >
+                  <div className="flex items-start space-x-3 mb-4">
+                    {/* <DollarSign className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" /> */}
+                    <div>
+                      <h3 className="text-lg font-bold text-white group-hover:text-yellow-300 transition-colors">
+                        Exclusive Business
+                      </h3>
+                      <h4 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 group-hover:from-yellow-300 group-hover:to-orange-300 transition-all">
+                        $Subscriptions: Run the City
+                      </h4>
+                    </div>
                   </div>
-                  <p className="text-gray-300 text-sm">
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     Control premium businesses and maximize your revenue potential.
                   </p>
-                </div>
+                </motion.div>
               </div>
               
               {/* Important Notice */}

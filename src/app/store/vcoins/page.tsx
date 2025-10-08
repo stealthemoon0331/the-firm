@@ -14,6 +14,7 @@ import {
   Lightbulb,
   ShoppingCart
 } from 'lucide-react';
+import Image from 'next/image';
 
 interface VCoinPackage {
   id: string;
@@ -29,35 +30,35 @@ const vCoinPackages: VCoinPackage[] = [
     amount: '500',
     price: '£3.49',
     displayAmount: '500 VCOINS',
-    backgroundImage: '/api/placeholder/300/200'
+    backgroundImage: '/store/500vCoins.png'
   },
   {
     id: '1000-vcoins',
     amount: '1,000',
     price: '£5.99',
     displayAmount: '1,000 VCOINS',
-    backgroundImage: '/api/placeholder/300/200'
+    backgroundImage: '/store/1000vCoins.png'
   },
   {
     id: '2000-vcoins',
     amount: '2,000',
     price: '£10.99',
     displayAmount: '2,000 VCOINS',
-    backgroundImage: '/api/placeholder/300/200'
+    backgroundImage: '/store/2000vCoins.png'
   },
   {
     id: '5000-vcoins',
     amount: '5,000',
     price: '£24.99',
     displayAmount: '5,000 VCOINS',
-    backgroundImage: '/api/placeholder/300/200'
+    backgroundImage: '/store/5000vCoins.png'
   },
   {
     id: '10000-vcoins',
     amount: '10,000',
     price: '£44.99',
     displayAmount: '10,000 VCOINS',
-    backgroundImage: '/api/placeholder/300/200'
+    backgroundImage: '/store/10000vCoins.png'
   }
 ];
 
@@ -114,16 +115,12 @@ export default function VCoinsPage() {
                   className="group relative bg-slate-800 rounded-xl overflow-hidden border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
                 >
                   {/* Background Image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 opacity-50 group-hover:opacity-30 transition-opacity duration-300" />
+                  <div>
+                    <Image src={pkg.backgroundImage} alt={pkg.title} width={300} height={200} />
+                  </div>
                   
                   {/* Content */}
                   <div className="relative z-10 p-6">
-                    {/* vCoin Amount Overlay */}
-                    <div className="bg-purple-600/80 backdrop-blur-sm rounded-lg p-4 mb-4 text-center">
-                      <h3 className="text-2xl font-bold text-white">
-                        {pkg.displayAmount}
-                      </h3>
-                    </div>
                     
                     {/* Amount and Price */}
                     <div className="text-center mb-4">
