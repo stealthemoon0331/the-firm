@@ -68,69 +68,69 @@ export default function StoreHeader({ currentPage = '', className = "" }: StoreH
     
       {/* Navigation */}
       <div className="absolute bottom-0 left-0 right-0">
-        <nav className="flex items-center justify-center space-x-6 py-6 px-8 bg-slate-800/90 backdrop-blur-sm border-t border-slate-700/50">
+        <nav className="flex items-center justify-center space-x-2 sm:space-x-4 lg:space-x-6 py-4 sm:py-6 px-4 sm:px-8 bg-slate-800/90 backdrop-blur-sm border-t border-slate-700/50 overflow-x-auto">
           <Link 
             href="/store" 
-            className={`relative transition-all duration-300 px-4 py-2 rounded-lg hover:bg-slate-700/50 group ${
+            className={`relative transition-all duration-300 px-2 sm:px-4 py-2 rounded-lg hover:bg-slate-700/50 group whitespace-nowrap ${
               isActivePage('') ? 'text-white' : 'text-gray-300 hover:text-white'
             }`}
           >
-            <span className="relative z-10">Home</span>
+            <span className="relative z-10 text-sm sm:text-base">Home</span>
             <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
               isActivePage('') ? 'w-full' : 'w-0 group-hover:w-full'
             }`}></div>
           </Link>
           <Link 
             href="/store/subscriptions" 
-            className={`relative transition-all duration-300 px-4 py-2 rounded-lg hover:bg-slate-700/50 group ${
+            className={`relative transition-all duration-300 px-2 sm:px-4 py-2 rounded-lg hover:bg-slate-700/50 group whitespace-nowrap ${
               isActivePage('subscriptions') ? 'text-white' : 'text-gray-300 hover:text-white'
             }`}
           >
-            <span className="relative z-10">Subscriptions</span>
+            <span className="relative z-10 text-sm sm:text-base">Subscriptions</span>
             <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
               isActivePage('subscriptions') ? 'w-full' : 'w-0 group-hover:w-full'
             }`}></div>
           </Link>
           <Link 
             href="/store/gang-packages" 
-            className={`relative transition-all duration-300 px-4 py-2 rounded-lg hover:bg-slate-700/50 group ${
+            className={`relative transition-all duration-300 px-2 sm:px-4 py-2 rounded-lg hover:bg-slate-700/50 group whitespace-nowrap ${
               isActivePage('gang-packages') ? 'text-white' : 'text-gray-300 hover:text-white'
             }`}
           >
-            <span className="relative z-10">Gang Packages</span>
+            <span className="relative z-10 text-sm sm:text-base">Gang Packages</span>
             <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
               isActivePage('gang-packages') ? 'w-full' : 'w-0 group-hover:w-full'
             }`}></div>
           </Link>
           <Link 
             href="/store/businesses" 
-            className={`relative transition-all duration-300 px-4 py-2 rounded-lg hover:bg-slate-700/50 group ${
+            className={`relative transition-all duration-300 px-2 sm:px-4 py-2 rounded-lg hover:bg-slate-700/50 group whitespace-nowrap ${
               isActivePage('businesses') ? 'text-white' : 'text-gray-300 hover:text-white'
             }`}
           >
-            <span className="relative z-10">Businesses</span>
+            <span className="relative z-10 text-sm sm:text-base">Businesses</span>
             <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
               isActivePage('businesses') ? 'w-full' : 'w-0 group-hover:w-full'
             }`}></div>
           </Link>
           <Link 
             href="/store/buy-once" 
-            className={`relative transition-all duration-300 px-4 py-2 rounded-lg hover:bg-slate-700/50 group ${
+            className={`relative transition-all duration-300 px-2 sm:px-4 py-2 rounded-lg hover:bg-slate-700/50 group whitespace-nowrap ${
               isActivePage('buy-once') ? 'text-white' : 'text-gray-300 hover:text-white'
             }`}
           >
-            <span className="relative z-10">Buy It Once</span>
+            <span className="relative z-10 text-sm sm:text-base">Buy It Once</span>
             <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
               isActivePage('buy-once') ? 'w-full' : 'w-0 group-hover:w-full'
             }`}></div>
           </Link>
           <Link 
             href="/store/vcoins" 
-            className={`relative transition-all duration-300 px-4 py-2 rounded-lg hover:bg-slate-700/50 group ${
+            className={`relative transition-all duration-300 px-2 sm:px-4 py-2 rounded-lg hover:bg-slate-700/50 group whitespace-nowrap ${
               isActivePage('vcoins') ? 'text-white' : 'text-gray-300 hover:text-white'
             }`}
           >
-            <span className="relative z-10">vCoins Store</span>
+            <span className="relative z-10 text-sm sm:text-base">vCoins Store</span>
             <div className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
               isActivePage('vcoins') ? 'w-full' : 'w-0 group-hover:w-full'
             }`}></div>

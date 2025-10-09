@@ -77,26 +77,26 @@ export default function StorePage() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Left Sidebar */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 order-2 lg:order-1">
             <StoreSidebar />
           </div>
 
           {/* Main Content Area */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 order-1 lg:order-2">
             {/* Store Introduction */}
             <div className="mb-8">
-              <h1 className="text-3xl font-bold text-white mb-6">
+              <h1 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">
                 Welcome to <span className="text-blue-400">The Firm</span>
               </h1>
               <div className="prose prose-invert max-w-none">
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                   Welcome to <strong>The Firm</strong>, the beating heart of business, crime, and enterprise within our city. 
                   The Firm is a community-driven server with immersive roleplay, dynamic economy, and player-led ventures, 
                   from high-profile mechanics to underground chop shops and nightclubs.
                 </p>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                   We offer tools and freedom to shape your story, where reputation, wealth, and power are earned through 
                   strategy and collaboration.
                 </p>

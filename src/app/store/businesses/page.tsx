@@ -80,20 +80,20 @@ export default function BusinessesPage() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Left Sidebar */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 order-2 lg:order-1">
             <StoreSidebar />
           </div>
 
           {/* Main Content Area */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 order-1 lg:order-2">
             {/* Page Title */}
             <div className="mb-8">
-              <h1 className="text-3xl font-bold text-white mb-6">
+              <h1 className="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">
                 Premium Business Subscriptions
               </h1>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
                 Many businesses within The Firm can be purchased using in-game currency (GPB). However, certain premium 
                 businesses are available exclusively through monthly subscription packages. These subscription-based 
                 businesses provide a more unique, hands-on management experience and typically generate greater in-game revenue.
