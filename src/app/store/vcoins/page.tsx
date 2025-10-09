@@ -1,18 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import StoreSidebar from '@/components/StoreSidebar';
 import StoreHeader from '@/components/StoreHeader';
 import { 
-  Crown, 
-  Users, 
-  Shield, 
-  Star,
   AlertTriangle,
-  Coins,
-  Lightbulb,
-  ShoppingCart
+  Lightbulb
 } from 'lucide-react';
 import Image from 'next/image';
 

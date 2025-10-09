@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Shield, Scale, AlertTriangle, BookOpen, FileText, Gavel } from 'lucide-react';
+import { Search, X, Shield, Scale } from 'lucide-react';
 
 interface Legislation {
   id: string;

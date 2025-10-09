@@ -1,14 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { 
-  Users, 
-  Copy, 
-  Check
-} from 'lucide-react';
 
 interface StoreHeaderProps {
   currentPage?: string;
@@ -16,31 +10,11 @@ interface StoreHeaderProps {
 }
 
 export default function StoreHeader({ currentPage = '', className = "" }: StoreHeaderProps) {
-  const [copied, setCopied] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  const handleCopyServer = async () => {
-    try {
-      await navigator.clipboard.writeText('play.thefirm.club');
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy: ', err);
-    }
-  };
-
-  const handleDiscordClick = () => {
-    window.open('https://discord.com/invite/3kXK2vSg', '_blank', 'noopener,noreferrer');
-  };
-
-  const getPageUrl = () => {
-    if (currentPage === 'home') return 'store.thefirm.club';
-    return `store.thefirm.club/category/${currentPage}`;
-  };
 
   const isActivePage = (page: string) => {
     if (page === 'home' && currentPage === '') return true;

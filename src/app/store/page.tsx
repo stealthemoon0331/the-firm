@@ -1,7 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
 import StoreSidebar from '@/components/StoreSidebar';
 import StoreHeader from '@/components/StoreHeader';
 import { 
@@ -9,12 +7,7 @@ import {
   Users, 
   Building2, 
   ShoppingBag, 
-  Coins, 
-  Star,
-  Shield,
-  Car,
-  Briefcase,
-  Zap
+  Coins
 } from 'lucide-react';
 
 interface StoreCategory {
@@ -25,49 +18,6 @@ interface StoreCategory {
   backgroundImage: string;
   icon: React.ReactNode;
 }
-
-const storeCategories: StoreCategory[] = [
-  {
-    id: 'subscriptions',
-    title: 'SUBSCRIPTIONS',
-    subtitle: 'Subscriptions',
-    href: '/store/subscriptions',
-    backgroundImage: '/api/placeholder/400/300',
-    icon: <Crown className="h-8 w-8" />
-  },
-  {
-    id: 'gang-packages',
-    title: 'GANG PACKAGES',
-    subtitle: 'Gang Packages',
-    href: '/store/gang-packages',
-    backgroundImage: '/api/placeholder/400/300',
-    icon: <Users className="h-8 w-8" />
-  },
-  {
-    id: 'businesses',
-    title: 'BUSINESS SUBSCRIPTIONS',
-    subtitle: 'Businesses',
-    href: '/store/businesses',
-    backgroundImage: '/api/placeholder/400/300',
-    icon: <Building2 className="h-8 w-8" />
-  },
-  {
-    id: 'buy-once',
-    title: 'BUY IT ONCE',
-    subtitle: 'Buy It Once',
-    href: '/store/buy-once',
-    backgroundImage: '/api/placeholder/400/300',
-    icon: <ShoppingBag className="h-8 w-8" />
-  },
-  {
-    id: 'vcoins',
-    title: 'VCOIN STORE',
-    subtitle: 'vCoins Store',
-    href: '/store/vcoins',
-    backgroundImage: '/api/placeholder/400/300',
-    icon: <Coins className="h-8 w-8" />
-  }
-];
 
 export default function StorePage() {
   return (

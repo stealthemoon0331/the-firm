@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Menu, X, Gamepad2, Star, Zap } from 'lucide-react';
+import { Menu, X, Star } from 'lucide-react';
 import Image from 'next/image';
 
 const Header = () => {

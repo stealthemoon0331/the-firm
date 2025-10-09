@@ -15,10 +15,8 @@ import {
   ArrowRight,
   Zap,
   TrendingUp,
-  Globe,
   Heart,
-  Award,
-  Play
+  Award
 } from 'lucide-react';
 
 // Counter animation component
@@ -469,7 +467,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
-              We're not just another gaming server. We're a community-driven platform 
+              We&apos;re not just another gaming server. We&apos;re a community-driven platform 
               that puts players at the center of everything we do.
             </p>
           </motion.div>
@@ -550,7 +548,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
-              Don't just take our word for it. Here's what our community members have to say about their experience.
+              Don&apos;t just take our word for it. Here&apos;s what our community members have to say about their experience.
             </p>
           </motion.div>
 
@@ -581,7 +579,7 @@ export default function Home() {
                     {/* Content */}
                     <div className="flex-grow">
                       <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed mb-4 md:mb-6 text-base md:text-lg">
-                        "{testimonial.content}"
+                        &ldquo;{testimonial.content}&rdquo;
                       </p>
                     </div>
                     

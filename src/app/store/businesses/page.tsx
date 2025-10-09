@@ -1,19 +1,11 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import StoreSidebar from '@/components/StoreSidebar';
 import StoreHeader from '@/components/StoreHeader';
 import BusinessPackageCard from '@/components/BusinessPackageCard';
 import { 
-  Crown, 
-  Users, 
-  Shield, 
-  Star,
   AlertTriangle,
-  Building2,
-  Car,
-  Wrench,
   Briefcase,
   DollarSign
 } from 'lucide-react';
@@ -133,7 +125,7 @@ export default function BusinessesPage() {
                     {/* <Briefcase className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" /> */}
                     <div>
                       <h3 className="text-lg font-bold text-white group-hover:text-green-300 transition-colors">
-                        The Firm's Elite Business Network
+                        The Firm&apos;s Elite Business Network
                       </h3>
                     </div>
                   </div>
