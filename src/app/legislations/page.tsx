@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Shield, Scale, AlertTriangle, BookOpen, FileText, Gavel } from 'lucide-react';
-import Image from 'next/image';
 
 interface Legislation {
   id: string;
@@ -141,15 +140,6 @@ export default function LegislationsPage() {
     legislation.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
     legislation.category.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Guide': return <BookOpen className="h-4 w-4" />;
-      case 'Act': return <Gavel className="h-4 w-4" />;
-      case 'Caution': return <AlertTriangle className="h-4 w-4" />;
-      default: return <FileText className="h-4 w-4" />;
-    }
-  };
 
   const getCategoryColor = (category: string) => {
     switch (category) {

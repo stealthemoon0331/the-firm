@@ -13,7 +13,6 @@ import {
   Lock, 
   Star,
   Search,
-  Filter,
   Plus,
   Eye,
   ThumbsUp,
