@@ -24,7 +24,7 @@ export default function StoreSidebar({ className = "" }: StoreSidebarProps) {
       {/* Welcome Section */}
       <div className="bg-slate-800 rounded-xl p-6 border border-slate-700">
         <h2 className="text-xl font-bold text-white mb-4">
-          Welcome to The Firm's Store
+          Welcome to The Firm&apos;s Store
         </h2>
         <div className="bg-slate-700 rounded-lg p-4 border border-slate-600">
           <p className="text-gray-300 text-sm leading-relaxed">
