@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Menu, X, Star } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 
 const Header = () => {
@@ -150,14 +150,14 @@ const Header = () => {
               transition={{ delay: navItems.length * 0.1 }}
               className="pt-4 border-t border-slate-700/50"
             >
-              <Link
+              {/* <Link
                 href="/store"
                 className="w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold text-center hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 flex items-center justify-center space-x-2 text-base transform hover:scale-105"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <Star className="h-5 w-5" />
                 <span>Join Premium</span>
-              </Link>
+              </Link> */}
             </motion.div>
           </div>
         </motion.div>
