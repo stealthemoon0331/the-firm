@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import StoreSidebar from '@/components/StoreSidebar';
 import StoreHeader from '@/components/StoreHeader';
 import Image from 'next/image';
+import { AlertTriangle, Crown, Shield, Star, Users } from 'lucide-react';
 
 interface SubscriptionPackage {
   id: string;
@@ -21,14 +22,14 @@ const subscriptionPackages: SubscriptionPackage[] = [
     price: '£5.00',
     icon: <Crown className="h-8 w-8" />,
     backgroundImage: '/vip.png',
-    popular: false
+    popular: false    
   },
   {
     id: 'civ-club',
     title: 'Civ Club',
     price: '£10.00',
     icon: <Users className="h-8 w-8" />,
-    backgroundImage: '/store/civ-club.png'
+    backgroundImage: '/store/civ-club.png'    
   },
   {
     id: 'blue-line-pass',
