@@ -5,7 +5,8 @@ import StoreSidebar from '@/components/StoreSidebar';
 import StoreHeader from '@/components/StoreHeader';
 import { 
   AlertTriangle,
-  ShoppingCart
+  ShoppingCart,
+  UserPlus
 } from 'lucide-react';
 import Image from 'next/image';
 
