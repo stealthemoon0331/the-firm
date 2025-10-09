@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { 
   Users, 
-  Gamepad2, 
   Shield, 
   Star, 
   Target, 
@@ -157,7 +156,7 @@ export default function About() {
               <span className="gradient-text">About The Firm</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              We're more than just a gaming company. We're architects of digital worlds, 
+              We&apos;re more than just a gaming company. We&apos;re architects of digital worlds, 
               builders of communities, and creators of unforgettable experiences.
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
