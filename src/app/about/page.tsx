@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { 
   Users, 
-  Gamepad2, 
   Shield, 
   Star, 
   Target, 
@@ -157,11 +156,11 @@ export default function About() {
               <span className="gradient-text">About The Firm</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              We're more than just a gaming company. We're architects of digital worlds, 
+              We&apos;re more than just a gaming company. We&apos;re architects of digital worlds, 
               builders of communities, and creators of unforgettable experiences.
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Since our founding, we've been dedicated to pushing the boundaries of what's possible 
+              Since our founding, we&apos;ve been dedicated to pushing the boundaries of what&apos;s possible 
               in gaming communities, creating immersive roleplay experiences that bring players together 
               from around the globe.
             </p>
@@ -216,7 +215,7 @@ export default function About() {
                 storytelling, collaboration, and shared adventures.
               </p>
               <p className="text-lg text-gray-400 leading-relaxed">
-                Our mission extends beyond entertainment – we're building digital communities 
+                Our mission extends beyond entertainment – we&apos;re building digital communities 
                 where friendships are forged, stories are created, and memories are made that 
                 last a lifetime.
               </p>
@@ -369,7 +368,7 @@ export default function About() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               While each position within The Firm should be treated with equal respect, 
-              here's a breakdown of our organizational structure.
+              here&apos;s a breakdown of our organizational structure.
             </p>
           </motion.div>
 
@@ -420,7 +419,7 @@ export default function About() {
               <span className="gradient-text">Join Our Story</span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Be part of the next chapter in The Firm's journey. Your story starts here.
+              Be part of the next chapter in The Firm&apos;s journey. Your story starts here.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <motion.a

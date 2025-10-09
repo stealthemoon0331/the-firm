@@ -15,10 +15,8 @@ import {
   ArrowRight,
   Zap,
   TrendingUp,
-  Globe,
   Heart,
-  Award,
-  Play
+  Award
 } from 'lucide-react';
 
 // Counter animation component
@@ -53,6 +51,12 @@ const Counter = ({ end, duration = 2, suffix = '' }: { end: number; duration?: n
 };
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const contentBoxes = [
     {
       title: 'Legislations',
@@ -344,28 +348,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Enhanced Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="flex flex-col items-center space-y-2"
-          >
-            <span className="text-gray-400 text-sm font-medium">Scroll to explore</span>
-            <div className="w-6 h-10 border-2 border-blue-400/50 rounded-full flex justify-center">
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1 h-3 bg-blue-400 rounded-full mt-2"
-              />
-            </div>
-          </motion.div>
-        </motion.div>
       </section>
 
       {/* Content Boxes Section */}
@@ -485,7 +467,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
-              We're not just another gaming server. We're a community-driven platform 
+              We&apos;re not just another gaming server. We&apos;re a community-driven platform 
               that puts players at the center of everything we do.
             </p>
           </motion.div>
@@ -566,7 +548,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
-              Don't just take our word for it. Here's what our community members have to say about their experience.
+              Don&apos;t just take our word for it. Here&apos;s what our community members have to say about their experience.
             </p>
           </motion.div>
 
@@ -597,7 +579,7 @@ export default function Home() {
                     {/* Content */}
                     <div className="flex-grow">
                       <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed mb-4 md:mb-6 text-base md:text-lg">
-                        "{testimonial.content}"
+                        &ldquo;{testimonial.content}&rdquo;
                       </p>
                     </div>
                     
@@ -633,7 +615,7 @@ export default function Home() {
         
         {/* Floating Elements */}
         <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
+          {mounted && [...Array(20)].map((_, i) => (
             <motion.div
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full"
