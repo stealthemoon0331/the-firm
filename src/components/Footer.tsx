@@ -12,7 +12,7 @@ const Footer = () => {
     {
       title: 'Community',
       links: [
-        { name: 'Discord Server', href: '#', icon: MessageCircle },
+        { name: 'Discord Server', href: 'https://discord.thefirm.club/', icon: MessageCircle },
         { name: 'Forum', href: '/forum', icon: Users },
         { name: 'Rules & Policies', href: '/policies', icon: Shield },
       ],
@@ -30,7 +30,7 @@ const Footer = () => {
   const socialLinks = [
     { 
       name: 'Discord', 
-      href: '#', 
+      href: 'https://discord.thefirm.club/', 
       color: 'hover:text-blue-400',
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
