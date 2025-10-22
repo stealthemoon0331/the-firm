@@ -83,7 +83,7 @@ export default function About() {
   ];
 
   const stats = [
-    { label: 'Active Players', value: '10,000+', icon: Users },
+    { label: 'Active Players', value: '100+', icon: Users },
     { label: 'Years of Experience', value: '5+', icon: Clock },
     { label: 'Countries Reached', value: '50+', icon: Globe },
     { label: 'Community Events', value: '500+', icon: Star },

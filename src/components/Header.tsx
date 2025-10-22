@@ -75,7 +75,7 @@ const Header = () => {
           {/* Enhanced CTA Buttons */}
           <div className="hidden lg:flex items-center lg:gap-4 space-x-4">
             <Link
-              href="https://discord.gg/3kXK2vSg"
+              href="https://discord.thefirm.club/"
               className="px-4 py-2 text-gray-300 hover:text-white transition-all duration-300 flex items-center space-x-2 group rounded-lg hover:bg-slate-800/50"
               target="_blank"
               rel="noopener noreferrer"

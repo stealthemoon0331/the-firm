@@ -113,7 +113,7 @@ export default function Home() {
       icon: Users,
       title: 'Active Community',
       description: 'Join thousands of players in immersive roleplay experiences',
-      stat: '10,000+',
+      stat: '100+',
       statLabel: 'Active Players',
       color: 'from-blue-500 to-cyan-500',
     },
@@ -137,7 +137,7 @@ export default function Home() {
       icon: Zap,
       title: 'Real-time Events',
       description: 'Live events and dynamic storylines that evolve daily',
-      stat: '50+',
+      stat: '10+',
       statLabel: 'Events/Month',
       color: 'from-orange-500 to-red-500',
     },
@@ -262,7 +262,7 @@ export default function Home() {
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full px-6 mb-8"
             >
               <Zap className="h-5 w-5 text-blue-400" />
-              <span className="text-blue-300 font-medium">Join 10,000+ Players Worldwide</span>
+              <span className="text-blue-300 font-medium">Join 1,000+ Players UK Server</span>
             </motion.div>
 
             <div className="flex justify-center items-center">
@@ -325,10 +325,10 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             {[
-              { label: 'Active Players', value: 10000, suffix: '+' },
+              { label: 'Active Players', value: 100, suffix: '+' },
               { label: 'Countries', value: 50, suffix: '+' },
-              { label: 'Events/Month', value: 50, suffix: '+' },
-              { label: 'Satisfaction', value: 98, suffix: '%' },
+              { label: 'Events/Month', value: 10, suffix: '+' },
+              { label: 'Satisfaction', value: 100, suffix: '%' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -524,86 +524,7 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-full px-4 py-2 md:px-6 md:py-3 mb-6 md:mb-8"
-            >
-              <Heart className="h-4 w-4 md:h-5 md:w-5 text-purple-400" />
-              <span className="text-purple-300 font-medium text-sm md:text-base">Community Love</span>
-            </motion.div>
-            
-            <h2 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-6 md:mb-8">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
-                What Players Say
-              </span>
-            </h2>
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4">
-              Don&apos;t just take our word for it. Here&apos;s what our community members have to say about their experience.
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group"
-              >
-                <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 md:p-8 rounded-2xl md:rounded-3xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-500 transform group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-purple-500/20 h-full">
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 opacity-5">
-                    <div className="absolute top-0 right-0 w-24 h-24 md:w-32 md:h-32 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-2xl" />
-                  </div>
-                  
-                  <div className="relative z-10 flex flex-col h-full">
-                    {/* Rating */}
-                    <div className="flex items-center space-x-1 mb-4 md:mb-6">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 md:h-5 md:w-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="flex-grow">
-                      <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed mb-4 md:mb-6 text-base md:text-lg">
-                        &ldquo;{testimonial.content}&rdquo;
-                      </p>
-                    </div>
-                    
-                    {/* Author */}
-                    <div className="flex items-center space-x-3 md:space-x-4 mt-auto">
-                      <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-white font-bold text-sm md:text-lg">
-                          {testimonial.name.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
-                      <div>
-                        <div className="font-semibold text-white group-hover:text-purple-300 transition-colors duration-300 text-sm md:text-base">
-                          {testimonial.name}
-                        </div>
-                        <div className="text-xs md:text-sm text-gray-400">
-                          {testimonial.role}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -664,7 +585,7 @@ export default function Home() {
             
             <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
               <Link
-                href="/store"
+                href="https://play.thefirm.club/"
                 className="group relative px-6 py-4 md:px-10 md:py-5 bg-white text-blue-600 rounded-xl md:rounded-2xl font-semibold text-base md:text-lg hover:shadow-2xl hover:shadow-white/25 transition-all duration-500 transform hover:scale-105 flex items-center space-x-2 md:space-x-3"
               >
                 <Star className="h-5 w-5 md:h-6 md:w-6" />
@@ -673,7 +594,7 @@ export default function Home() {
               </Link>
               
               <Link
-                href="/forum"
+                href="https://discord.thefirm.club/"
                 className="group px-6 py-4 md:px-10 md:py-5 border-2 border-white/50 text-white rounded-xl md:rounded-2xl font-semibold text-base md:text-lg hover:bg-white/10 hover:border-white transition-all duration-500 flex items-center space-x-2 md:space-x-3"
               >
                 <MessageCircle className="h-5 w-5" />
