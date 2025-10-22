@@ -262,7 +262,7 @@ export default function Home() {
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full px-6 mb-8"
             >
               <Zap className="h-5 w-5 text-blue-400" />
-              <span className="text-blue-300 font-medium">Join 1,000+ Players Worldwide</span>
+              <span className="text-blue-300 font-medium">Join 1,000+ Players UK Server</span>
             </motion.div>
 
             <div className="flex justify-center items-center">
